@@ -1,5 +1,6 @@
 extern crate gbemu;
 use gbemu::mem;
+use gbemu::cpu;
 
 fn main() {
     let logo_bytes: [u8; 48] = [0xCE, 0xED, 0x66, 0x66, 0xCC, 0x0D, 0x00, 0x0B, 0x03, 0x73, 0x00,
@@ -15,4 +16,6 @@ fn main() {
     assert_eq!(&logo_bytes[0..], &mem.rom[0x104..0x134]);
 
     println!("Logo check passed successfully");
+
+    cpu::run(&mut mem);
 }

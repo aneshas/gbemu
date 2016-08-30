@@ -1,0 +1,6 @@
+[package]
+name = "gbemu"
+version = "0.1.0"
+authors = ["Anes Hasicic <anes.hasicic@gmail.com>"]
+
+[dependencies]
